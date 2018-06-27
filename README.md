@@ -4,6 +4,7 @@
 ## 第三方集成todo list
 - [x] 在线文件转存到AliOSS
 - [ ] 微信文件转存到AliOSS
+- [x] 支持镙丝帽的短信发送
 
 ## 功能todo list
 - [ ] 日志文件
@@ -19,4 +20,7 @@ alioss:
   secret:
     key: your-own-aliyun-account-secret-key
     value: you-own-aliyun-account-secret-value
+sms:
+  luosimao:
+    api_key: your-own-luosimao-api-key
 ```
