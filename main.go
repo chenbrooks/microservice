@@ -7,6 +7,7 @@ import (
 	"log"
 	"microservice/upload"
 	"net/http"
+	"microservice/sms"
 )
 
 func main() {
@@ -18,6 +19,7 @@ func startWebServer() {
 	fmt.Println("start server")
 	router := mux.NewRouter()
 	router.HandleFunc("/tool/upload/image", upload.SaveImageURL)
+	router.HandleFunc("/tool/luosimao", sms.Send)
 	http.Handle("/", router)
 	err := http.ListenAndServe(":9527", nil)
 	if err != nil {
